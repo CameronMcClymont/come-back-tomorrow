@@ -1,0 +1,28 @@
+{
+  "manifest_version": 3,
+  "name": "Come Back Tomorrow",
+  "version": "1.0.0",
+  "description": "Press Cmd+B to close the current tab and have it reopen tomorrow.",
+  "permissions": [
+    "tabs",
+    "alarms"
+  ],
+  "content_scripts": [],
+  "action": {
+    "default_title": "Svelte Extension",
+    "default_popup": "build/index.html",
+    "default_icon": "build/favicon.png"
+  },
+  "background": {
+    "service_worker": "src/background.js"
+  },
+  "commands": {
+    "come-back-tomorrow": {
+      "suggested_key": {
+        "default": "Ctrl+B",
+        "mac": "Command+B"
+      },
+      "description": "Schedule the current tab to reopen tomorrow"
+    }
+  }
+}
